@@ -4,5 +4,5 @@ WORKDIR /go/src/github.com/ajvb/kala
 COPY . .
 RUN go build && mv kala /usr/bin
 
-CMD ["kala", "serve"]
+CMD ["kala", "serve", "--bolt-db=/var/boltdb"]
 EXPOSE 8000
